@@ -72,7 +72,7 @@ export default class ServiceAction extends Action {
                 this.dispatch(keys.postLink);
             })
             .catch((error) => {
-                notie.alert(3, "Post Error.", 2.5);
+                notie.alert(3, error, 2.5);
                 console.log(error);
             })
             .then(function finish() {

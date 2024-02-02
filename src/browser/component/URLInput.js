@@ -32,6 +32,7 @@ export default class URLInput extends React.Component {
                     pattern="^(?!.*#.*).+$"
                     onChange={this.onChange.bind(this)}
                 />
+                {this.state.value.includes("?") && <span style="color:red">URL contains anchor</span>}
             </div>
         );
     }
